@@ -17,8 +17,11 @@ var box={
    item8:8,
    item9:9
 }
+
 var player1={
     active:true,
+    score_ref:"#score-1",
+    score:0,
     game:[],
     icon:`<i class="material-icons box__icon">clear</i>`,
     hold:function(players){
@@ -72,6 +75,9 @@ var player1={
         console.log("verifying winner")
         if (valid){
             console.log("you win")
+            this.score+=1
+            document.querySelector(this.score_ref).textContent=this.score
+            reset()
             
         }else{
             this.hold(players)
@@ -80,7 +86,9 @@ var player1={
 }
 var player2={
     game:[],
+    score_ref:"#score-2",
     active:false,
+    score:0,
     icon:`<i class="material-icons box__icon icon--white">panorama_fish_eye</i>`
 }
 
@@ -176,3 +184,15 @@ box9.addEventListener('click',function(){
     controller(checkActivePlayer(players),box9)
 })
 
+function reset(){
+    box1.textContent=''
+    box2.textContent=''
+    box3.textContent=''
+    box4.textContent=''
+    box5.textContent=''
+    box6.textContent=''
+    box7.textContent=''
+    box8.textContent=''
+    box9.textContent=''
+    
+}
