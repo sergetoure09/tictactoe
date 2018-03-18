@@ -1,0 +1,117 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Roboto Condensed", sans-serif; }
+
+.wrapper {
+  width: 60%;
+  border: 1px solid rgba(168, 167, 167, 0.199);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #F8F8F8;
+  box-shadow: 0 0.1rem 0.7rem 0 rgba(56, 52, 52, 0.2); }
+
+.player-box {
+  width: 70%;
+  margin: 5rem auto;
+  margin-bottom: 1rem; }
+
+.canvas {
+  background-color: #27BCAC;
+  width: 100%;
+  padding: 3rem 10rem 3rem 10rem; }
+
+.message {
+  display: block;
+  color: grey;
+  padding: .7rem;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  width: 10rem; }
+
+.player {
+  width: calc((100% - 1rem)/2);
+  display: inline-block;
+  background-color: #fff;
+  padding: .5rem;
+  box-shadow: 0 0.1rem 0.7rem 0 rgba(56, 52, 52, 0.2); }
+  .player:visited, .player:link {
+    text-decoration: none;
+    color: inherit; }
+  .player--active {
+    border-bottom: 2px solid #27BCAC;
+    box-shadow: 0 0.4rem 0.7rem 0 rgba(56, 52, 52, 0.2); }
+  .player:last-child {
+    float: right; }
+  .player__icon {
+    font-weight: bolder;
+    display: inline-block; }
+  .player__score {
+    font-weight: 300;
+    display: inline-block;
+    float: right;
+    font-size: 2.5rem;
+    color: grey; }
+
+.box {
+  display: block;
+  list-style: none;
+  width: 50%;
+  margin: 0 auto; }
+  .box::after {
+    content: "";
+    display: block;
+    clear: both; }
+  .box__item {
+    float: left;
+    width: calc(100% / 3);
+    border: 7px solid rgba(0, 0, 0, 0.137);
+    height: 80px;
+    padding: 5px;
+    display: block;
+    position: relative; }
+  .box__icon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    font-weight: bold;
+    color: black; }
+
+.icon--white {
+  color: white; }
+
+.u-11,
+.u-13 {
+  border: none; }
+
+.u-12 {
+  border-top: none;
+  border-bottom: none; }
+
+.u-21,
+.u-23,
+.u-31,
+.u-33 {
+  border-bottom: none;
+  border-right: none;
+  border-left: none; }
+
+.u-22,
+.u-32 {
+  border-bottom: none; }
+
+.replay {
+  color: red; }
