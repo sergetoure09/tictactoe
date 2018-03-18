@@ -77,7 +77,7 @@ var player1={
             console.log("you win")
             this.score+=1
             document.querySelector(this.score_ref).textContent=this.score
-            reset()
+           setTimeout(reset(),3000)
             
         }else{
             this.hold(players)
